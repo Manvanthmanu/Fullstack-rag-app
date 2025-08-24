@@ -9,7 +9,7 @@ import {Settings} from "lucide-react";
 
 
 export default function WebApp() {
-  let rightSidebarStyle: CSSProperties = {
+  const rightSidebarStyle: CSSProperties = {
     minWidth: '22%',
     backgroundColor: '#212121',
     position: 'relative',

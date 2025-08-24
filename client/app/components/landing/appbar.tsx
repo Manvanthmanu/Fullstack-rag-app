@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import { ChevronRight } from "lucide-react";
 import { Button } from "@mui/joy";
 import logo from "../../assets/logo.png"; // Adjust the path as necessary
@@ -30,7 +31,7 @@ const Appbar: React.FC = () => {
         {/* Logo */}
         <img src={logo.src} alt="Logo" style={{ height: '40px', width: 'auto' }} />
 
-        <a href="/" style={{ color: '#eee', fontWeight: 'bold', fontSize: '1.2rem', marginLeft: '10px' }}>Nexlink-io</a>
+        <Link href="/" style={{ color: '#eee', fontWeight: 'bold', fontSize: '1.2rem', marginLeft: '10px', textDecoration: 'none' }}>Nexlink-io</Link>
       </div>
 
       <div>

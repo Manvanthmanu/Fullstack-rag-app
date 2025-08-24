@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 
 export default function ProfileMenu() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [user, setUser] = React.useState<any>(null);
+  const [user, setUser] = React.useState<{name?: string; avatarUrl?: string} | null>(null);
   const router = useRouter();
 
   React.useEffect(() => {

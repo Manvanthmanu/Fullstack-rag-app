@@ -32,8 +32,9 @@ export default function LoginPage() {
     await login(email, password);
     await account.get(); // confirm the session is active
     router.push("/webapp"); // safe redirect
-  } catch (err: any) {
-    setError(err?.message || "Login failed");
+  } catch (err: unknown) {
+    const errorMessage = err instanceof Error ? err.message : "Login failed";
+    setError(errorMessage);
   } finally {
     setLoading(false);
   }
@@ -42,8 +43,9 @@ export default function LoginPage() {
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle(); // Will redirect to Google login
-    } catch (err: any) {
-      setError(err?.message || "Google login failed");
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : "Google login failed";
+      setError(errorMessage);
     }
   };
 
